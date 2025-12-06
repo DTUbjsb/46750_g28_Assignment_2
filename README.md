@@ -18,7 +18,7 @@ This project implements three optimization models for fuel procurement and elect
 
 ### Model 1b: Full time interval
 - **Content:** A repeat of Model 1 for every time period in the specified time period. It is the unadultered Model 1 approach in a for loop to have the easiest interpretability for the comparison with Model 2
-- **Results:** The cost per month, and the fuel composition bought, and energy generated per fuel type is saved in results/model1/running_cost_results.csv
+- **Results:** The cost per month, and the fuel composition bought, and energy generated per fuel type is saved in results/model1/model1_results.csv
 
 ### Model 2: Full time interval with Storage and Perfect Foresight
 - **Approach:** Solves a single optimization problem across all specified months with state-of-charge constraints
@@ -29,11 +29,13 @@ This project implements three optimization models for fuel procurement and elect
   - Enables fuel arbitrage across time periods
 - **Results:** The cost per month, and the fuel composition bought, and energy generated per fuel type is saved in results/model2/model2_results.csv
 
-### Model 3: Full time interval with Scenario Analysis
-- **Approach:** Extends Model 2 with 
-- **Decision Variables:** Same as Model 2 with 
+### Model 3: Full time interval with Scenario Analysis and stochasticity
+- **Approach:** Extends Model 2 with 3 scenarios for price and a stochastic approach to modeling
+- **Decision Variables:** Same as Model 2
 - **Key Features:**
-  - 
+  - Multiple price scenarios (low, medium, high) reflecting fuel price uncertainty
+  - Stochastic optimization with expected value objective across scenarios
+  - Enables insights into the effects of uncertainty and price variations
 - **Results:** saved in a variety of csv files in results/model3 folder
 
 ## Data Needed
