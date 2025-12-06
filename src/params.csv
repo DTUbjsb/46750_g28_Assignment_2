@@ -1,0 +1,9 @@
+parameter,value
+start_date, 2020-01
+end_date, 2022-12
+fuel1, coal
+fuel2, oil
+fuel3, gas
+zone, DK_1
+resample_method, ME
+supply_factor, 0.6
