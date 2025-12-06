@@ -9,7 +9,29 @@ CSV formats:
 
 import pandas as pd
 import numpy as np
+from csv import DictReader
 from typing import Optional, Union
+
+
+def load_params(file_path: str) -> dict:
+    """Load parameters from CSV and return as dictionary using DictReader."""
+    params = {}
+    with open(file_path, mode='r', newline='') as csvfile:
+        reader = DictReader(csvfile)
+        for row in reader:
+            param = row['parameter'].strip()
+            value = row['value'].strip()
+            try:
+                # Try to convert to float or int if possible
+                if '.' in value:
+                    value_converted = float(value)
+                else:
+                    value_converted = int(value)
+            except ValueError:
+                # Keep as string if conversion fails
+                value_converted = value
+            params[param] = value_converted
+    return params
 
 def load_prices(
     file_path: str,
