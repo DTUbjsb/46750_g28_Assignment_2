@@ -3,8 +3,14 @@
 ## Overview
 This project implements three optimization models for fuel procurement and electricity generation planning. All models minimize fuel purchasing costs while meeting electricity demand constraints over a desired period (2019–2022 in model1, for instance).
 
-## Dataloader
-- **Functionality:** this file is not to be opened and run per se, it serves as a function for the model files to retrieve data from the csv files
+## Functionality
+- **data folder** here we have the input data for the model as supplied by the Client. Any changes made here will directly influence the modeling proces - so proceed with care.
+- **src/data_loader:** this file is not to be opened and run per se, it serves as a function for the model files to retrieve data from the csv files
+- **src/main_modelX:** the jupyter file to run to generate the csv files for plotting and showing the results of the models with the input data supplied. Some plots are made here to supplement the plots in the final report, to make sure the models are working as intended during use.
+- **src/params.csv:** this file contains the modelling choices. The rows should be self explanatory.
+- **src/plotting files:** the plots in the final report can be made with the plotting files.
+
+
 
 ## Data
 - **csv files:** the csv files contain the needed data. If experiments with changed prices, other storage size, plant capacities are of interest these parameters must be changed in the csv files.
