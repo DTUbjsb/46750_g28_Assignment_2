@@ -8,7 +8,7 @@ This project implements three optimization models for fuel procurement and elect
 - **src/data_loader:** this file is not to be opened and run per se, it serves as a function for the model files to retrieve data from the csv files
 - **src/main_modelX:** the jupyter file to run to generate the csv files for plotting and showing the results of the models with the input data supplied. Some plots are made here to supplement the plots in the final report, to make sure the models are working as intended during use.
 - **src/params.csv:** this file contains the modelling choices. The rows should be self explanatory.
-- **src/plotting files:** the plots in the final report can be made with the plotting files.
+- **src/plot_figures:** the plots in the final report can be made with the plotting files.
 
 
 
@@ -36,7 +36,7 @@ This project implements three optimization models for fuel procurement and elect
 - **Results:** The cost per month, and the fuel composition bought, and energy generated per fuel type is saved in results/model2/model2_results.csv
 
 ### Model 3: Full time interval with Scenario Analysis and stochasticity
-- **Approach:** Extends Model 2 with 3 scenarios for price and a stochastic approach to modeling
+- **Approach:** Extends Model 2 with 3 scenarios for prices and a stochastic approach to modeling
 - **Decision Variables:** Same as Model 2
 - **Key Features:**
   - Multiple price scenarios (low, medium, high) reflecting fuel price uncertainty
@@ -54,5 +54,5 @@ This project implements three optimization models for fuel procurement and elect
 ## Results
 - Model 1 results: `results/model1/model1_results.csv`
 - Model 2 results: `results/model2/model2_results.csv` 
-- Model 3 results: `results/model3/deterministic_results_by_fuel.csv, stochastic_expected_results_by_fuel.csv, scenario_*.csv` 
+- Model 3 results: `results/model3/., stochastic_expected_running_costs.csv, deterministic_running_costs_scenario*.csv` 
 
